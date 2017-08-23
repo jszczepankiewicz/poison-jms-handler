@@ -1,0 +1,21 @@
+group 'com.jszczepankiewicz'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.8'
+    testCompileOnly group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.8'
+
+    testCompileOnly 'javax.jms:jms-api:1.1-rev-1'
+    compileOnly 'javax.jms:jms-api:1.1-rev-1'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile 'org.assertj:assertj-core:3.8.0'
+    testCompile 'org.mockito:mockito-core:2.8.47'
+}
